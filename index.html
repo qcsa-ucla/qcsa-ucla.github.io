@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 
 </head>
@@ -67,11 +68,37 @@
         <section id="events" class="clean-block about-us">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info clean-heading">Event Types</h2>
+                    <h2 class="text-info clean-heading">Events</h2>
                 </div>
                 <div class="card-deck" style="break-inside: avoid-column;-webkit-column-break-inside: avoid;">
                 
                     <div class="people-card">
+                        <div class="w3-content w3-section" style="margin-bottom: 20px;margin-right: 20px;">
+                            <img class="speakers" src="assets/img/speaker_events/230221_Narang.pdf" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/230214_Deloitte.pdf" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/221115_Pudenz.png" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/220713_Gyure.png" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/220520_Palsberg.png" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/220527_Niu.png" style="width:100%">
+                            <img class="speakers" src="assets/img/speaker_events/220518_Ross.pdf" style="width:100%">
+                        </div>
+
+                        <script>
+                        var myIndex = 0;
+                        speakerswitch();
+                        function speakerswitch() {
+                            var i;
+                            var x = document.getElementsByClassName("speakers");
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(speakerswitch, 2000); // Change image every 2 seconds
+                        }
+                        </script>
+                        
                         <div class="people-card-text">
                             <h4><strong>Speaker Events</strong></h4>
                             <strong>1-3 times each quarter</strong>
